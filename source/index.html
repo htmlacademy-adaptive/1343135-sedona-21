@@ -1,12 +1,118 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Город Седона. Главная страница</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+  <body class="page__body">
+    <div class="container">
+      <header class="page__header header">
+        <a class="header__logo logo">
+          <img class="logo__image" src="https://via.placeholder.com/102x84" width="102" height="84" alt="Логотип города Седона">
+        </a>
+        <nav class="header__nav nav">
+          <button class="nav__toggle" type="button" aria-controls="nav__list" aria-expanded="true">
+            <span class="visually-hidden">Меню</span>
+          </button>
+          <ul class="nav__list nav-list" id="nav__list">
+            <li class="nav-list__item">
+              <a class="nav-list__link nav-list__link--current">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="blank.html">Фото и видео</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="blank.html">Форма отзыва</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="blank.html" lang="en">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="page__main main">
+        <h1 class="visually-hidden">Главная страница сайта города Седона</h1>
+        <img class="main__image" src="https://via.placeholder.com/320x389" width="320" height="389" alt="Горный пейзаж Седоны">
+        <p class="title main__title">Седона — небольшой городок в&nbsp;Аризоне, заслуживающий большего!</p>
+        <p class="text main__text">Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем&nbsp;Гранд Каньон!</p>
+        <section class="town">
+          <div class="section-layout">
+            <div class="text-wrapper">
+              <h2 class="title">Настоящий городок</h2>
+              <p class="text text--number">№ 1</p>
+              <p class="text">Седона не аттракцион для&nbsp;туристов, там&nbsp;течёт своя жизнь</p>
+            </div>
+            <img class="town__image" src="https://via.placeholder.com/320x260" width="320" height="260" alt="Улица Седоны с зелёными деревьями и кафе">
+          </div>
+          <ul class="town__list">
+            <li class="town__item">
+              <h3 class="title">Жильё</h3>
+              <p class="text">Рекомендуем пожить в&nbsp;настоящем мотеле, все как в&nbsp;кино!</p>
+            </li>
+            <li class="town__item">
+              <h3 class="title">Сувениры</h3>
+              <p class="text">Не только китайского, но&nbsp;и&nbsp;местного производства!</p>
+            </li>
+            <li class="town__item">
+              <h3 class="title">Еда</h3>
+              <p class="text">Всегда заказывайте фирменный бургер, Вы не&nbsp;разочаруетесь!</p>
+            </li>
+          </ul>
+        </section>
+        <section class="bridge">
+          <div class="section-layout">
+            <div class="text-wrapper">
+              <h2 class="title">Там есть мост дьявола</h2>
+              <p class="text text--number">№ 2</p>
+              <p class="text">Да, по&nbsp;нему можно пройти! Если&nbsp;вы осмелитесь, конечно</p>
+            </div>
+            <img class="bridge__image" src="https://via.placeholder.com/320x260" width="320" height="260" alt="Мост над верхушками деревьев, сформированный горными породами">
+          </div>
+        </section>
+        <div class="main__list">
+          <section class="main__item">
+            <h2 class="title">Небольшая площадь</h2>
+            <p class="text text--number">№ 3</p>
+            <p class="text">Все интересные места находятся очень&nbsp;близко</p>
+          </section>
+          <section class="main__item">
+            <h2 class="title">Красивая дорога</h2>
+            <p class="text text--number">№ 4</p>
+            <p class="text">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
+          </section>
+          <section class="main__item">
+            <h2 class="title">Мало туристов</h2>
+            <p class="text text--number">№ 5</p>
+            <p class="text">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
+          </section>
+        </div>
+        <section class="order">
+          <h2 class="title">Заинтересовались?</h2>
+          <p class="text">Укажите предполагаемые даты поездки, и&nbsp;мы покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
+          <a class="order__link" href="blank.html">Найти гостиницу</a>
+          <iframe class="order__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1893746.0975862546!2d-112.96938592780259!3d34.85700905949273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C%20AZ%2086336%2C%20USA!5e0!3m2!1sen!2sru!4v1605273220819!5m2!1sen!2sru" width="320" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+      </main>
+      <footer class="page__footer footer">
+        <p class="footer__tag title" lang="en">#visitSedona</p>
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="blank.html"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="blank.html"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="blank.html"></a>
+          </li>
+        </ul>
+        <p class="footer__copy copy">Разработано
+          <a class="copy__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copy__image" src="https://via.placeholder.com/27х35" width="27" height="35" alt="Логотип HTML академии">
+          </a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
