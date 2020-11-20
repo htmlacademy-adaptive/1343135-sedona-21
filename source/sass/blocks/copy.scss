@@ -1,0 +1,15 @@
+.copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.copy__text {
+  margin-right: 10px;
+  color: $basic-contrast-color;
+}
+
+.copy__image {
+  display: block;
+}

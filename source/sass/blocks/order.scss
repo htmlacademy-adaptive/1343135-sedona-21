@@ -1,0 +1,31 @@
+.order__text-wrapper {
+  padding: 33px 20px 45px 20px;
+  margin: 0 auto;
+  max-width: 480px;
+  text-align: center;
+}
+
+.order__title {
+  padding: 0 10px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.order__text {
+  padding: 0 10px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.order__link {
+  display: block;
+  padding: 17px 32px 16px 32px;
+  color: $contrary-color;
+  background-color: $accent-background;
+  text-decoration: none;
+}
+
+.order__map {
+  width: 100%;
+  object-fit: cover;
+}

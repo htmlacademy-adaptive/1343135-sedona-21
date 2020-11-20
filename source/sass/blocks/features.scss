@@ -1,0 +1,38 @@
+// Features list
+
+.features {
+  padding: 40px 30px 40px 70px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.features__item {
+  margin-bottom: 26px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.features__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -48px;
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 37px;
+    background-color: crimson;
+  }
+}
+
+.features__text {
+  margin: 0;
+}

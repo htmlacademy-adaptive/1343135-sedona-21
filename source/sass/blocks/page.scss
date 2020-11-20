@@ -1,0 +1,27 @@
+// Page Body
+
+.page__body {
+  @include reset;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: $basic-color;
+  text-transform: uppercase;
+  background-color: $page-background;
+}
+
+// Page Header
+
+.page__header {
+  z-index: 1;
+}
+
+// Page footer
+
+.page__footer {
+  margin-top: auto;
+}
