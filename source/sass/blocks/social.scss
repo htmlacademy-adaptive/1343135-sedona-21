@@ -1,0 +1,22 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include list-reset;
+}
+
+.social__item {
+  margin-right: 6px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 46px;
+  height: 48px;
+  background-color: $accent-background;
+}

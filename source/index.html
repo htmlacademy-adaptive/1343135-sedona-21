@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Город Седона. Главная страница</title>
   </head>
   <body class="page__body">
@@ -12,10 +13,10 @@
           <img class="logo__image" src="https://via.placeholder.com/102x84" width="102" height="84" alt="Логотип города Седона">
         </a>
         <nav class="header__nav">
-          <button class="nav__toggle" type="button" aria-controls="nav__list" aria-expanded="true">
+          <button class="header__nav-toggle" type="button" aria-controls="header__nav-list" aria-expanded="true">
             <span class="visually-hidden">Меню</span>
           </button>
-          <ul class="nav__list nav-list" id="nav__list">
+          <ul class="header__nav-list nav-list hidden" id="header__nav-list">
             <li class="nav-list__item">
               <a class="nav-list__link nav-list__link--current">Главная</a>
             </li>
@@ -34,32 +35,32 @@
       <main class="page__main main">
         <div class="main__heading heading">
           <h1 class="visually-hidden">Главная страница сайта города Седона</h1>
-          <img class="heading__image" src="https://via.placeholder.com/320x389" width="320" height="389" alt="Горный пейзаж Седоны">
+          <img class="heading__image" src="https://via.placeholder.com/1200x518" width="1200" height="518" alt="Горный пейзаж Седоны">
         </div>
         <div class="main__lead lead">
           <p class="lead__title title">Седона — небольшой городок в&nbsp;Аризоне, заслуживающий большего!</p>
           <p class="lead__text text">Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем&nbsp;Гранд Каньон!</p>
         </div>
         <section class="town">
-          <div class="town__advantage advantage">
+          <div class="town__advantage advantage advantage--decorate">
             <div class="advantage__text-wrapper">
               <h2 class="advantage__title title">Настоящий городок</h2>
               <p class="advantage__text text text--number">№ 1</p>
               <p class="advantage__text text">Седона не аттракцион для&nbsp;туристов, там&nbsp;течёт своя жизнь</p>
             </div>
-            <img class="advantage__image" src="https://via.placeholder.com/320x260" width="320" height="260" alt="Улица Седоны с зелёными деревьями и кафе">
+            <img class="advantage__image" src="https://via.placeholder.com/800x256" width="800" height="256" alt="Улица Седоны с зелёными деревьями и кафе">
           </div>
           <ul class="town__list features">
             <li class="features__item">
-              <h3 class="features__title title">Жильё</h3>
+              <h3 class="features__title features__title--apartment title">Жильё</h3>
               <p class="features__text text">Рекомендуем пожить в&nbsp;настоящем мотеле, все как в&nbsp;кино!</p>
             </li>
             <li class="features__item">
-              <h3 class="features__title title">Сувениры</h3>
+              <h3 class="features__title features__title--souvenir title">Сувениры</h3>
               <p class="features__text text">Не только китайского, но&nbsp;и&nbsp;местного производства!</p>
             </li>
             <li class="features__item">
-              <h3 class="features__title title">Еда</h3>
+              <h3 class="features__title features__title--food title">Еда</h3>
               <p class="features__text text">Всегда заказывайте фирменный бургер, Вы не&nbsp;разочаруетесь!</p>
             </li>
           </ul>
@@ -70,7 +71,7 @@
             <p class="advantage__text text text--number">№ 2</p>
             <p class="advantage__text text">Да, по&nbsp;нему можно пройти! Если&nbsp;вы осмелитесь, конечно</p>
           </div>
-          <img class="advantage__image" src="https://via.placeholder.com/320x260" width="320" height="260" alt="Мост над верхушками деревьев, сформированный горными породами">
+          <img class="advantage__image" src="https://via.placeholder.com/800x256" width="800" height="256" alt="Мост над верхушками деревьев, сформированный горными породами">
         </section>
         <div class="advantage-list">
           <section class="advantage-list__item">
@@ -90,10 +91,12 @@
           </section>
         </div>
         <section class="order">
-          <h2 class="order__title title">Заинтересовались?</h2>
-          <p class="order__text text">Укажите предполагаемые даты поездки, и&nbsp;мы покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
-          <a class="order__link" href="blank.html">Найти гостиницу</a>
-          <iframe class="order__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1893746.0975862546!2d-112.96938592780259!3d34.85700905949273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C%20AZ%2086336%2C%20USA!5e0!3m2!1sen!2sru!4v1605273220819!5m2!1sen!2sru" width="320" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <div class="order__text-wrapper">
+            <h2 class="order__title title">Заинтересовались?</h2>
+            <p class="order__text text">Укажите предполагаемые даты поездки, и&nbsp;мы покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
+            <a class="order__link title" href="blank.html">Найти гостиницу</a>
+          </div>
+          <iframe class="order__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1893746.0975862546!2d-112.96938592780259!3d34.85700905949273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C%20AZ%2086336%2C%20USA!5e0!3m2!1sen!2sru!4v1605273220819!5m2!1sen!2sru" width="1200" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
       </main>
       <footer class="page__footer footer">
@@ -115,9 +118,10 @@
             </a>
           </li>
         </ul>
-        <p class="footer__copy copy">Разработано
+        <p class="footer__copy copy">
+          <span class="copy__text">Разработано</span>
           <a class="copy__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copy__image" src="https://via.placeholder.com/27х35" width="27" height="35" alt="Логотип HTML академии">
+            <img class="copy__image" src="img/htmlacademy.svg" width="27" height="35" alt="Логотип HTML академии">
           </a>
         </p>
       </footer>

@@ -1,0 +1,27 @@
+// Navigation list
+
+.nav-list {
+  @include list-reset;
+  align-items: center;
+  justify-content: space between;
+  background-color: $accent-background;
+  box-shadow: $nav-list-shadow;
+}
+
+// Navigation item
+
+.nav-list__item {
+  padding: 10px 20px 5px 20px;
+  text-align: center;
+  box-shadow: $nav-item-shadow;
+}
+
+// Navigation link
+
+.nav-list__link {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  color: $contrary-color;
+  text-decoration: none;
+}

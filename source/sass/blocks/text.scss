@@ -1,0 +1,13 @@
+.text {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.text--number::before {
+  content: "\2014\2009";
+}
+
+
+.text--number::after {
+  content: "\2009\2014";
+}

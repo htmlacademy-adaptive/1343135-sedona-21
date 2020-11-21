@@ -1,1 +1,29 @@
-// Начните писать стили здесь
+// Fonts
+@import "fonts.scss";
+// Variables
+@import "variables.scss";
+// Mixins
+@import "mixins.scss";
+// Global classes
+@import "global.scss";
+// Common blocks
+@import "blocks/title.scss";
+@import "blocks/text.scss";
+// Page
+@import "blocks/page.scss";
+// Header
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/nav-list.scss";
+// Main
+@import "blocks/main.scss";
+@import "blocks/heading.scss";
+@import "blocks/lead.scss";
+@import "blocks/advantage.scss";
+@import "blocks/features.scss";
+@import "blocks/advantage-list.scss";
+@import "blocks/order.scss";
+// Footer
+@import "blocks/social.scss";
+@import "blocks/copy.scss";
+@import "blocks/footer.scss";
