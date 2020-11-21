@@ -34,7 +34,7 @@
       </header>
       <main class="page__main main">
         <div class="main__heading heading">
-          <img class="heading__image" src="https://via.placeholder.com/1200x518" width="1200" height="518" alt="Горный пейзаж Седоны">
+          <img class="heading__image heading__image--small" src="https://via.placeholder.com/1200x518" width="1200" height="518" alt="Горный пейзаж Седоны">
         </div>
         <div class="main__lead lead">
           <h1 class="lead__title title">Оставьте свой отзыв</h1>
@@ -45,13 +45,16 @@
             <legend class="feedback__legend">
               <h2 class="feedback__title">Представьтесь:</h2>
             </legend>
-            <label class="feedback__name-label">Имя*:
+            <label class="feedback__name-label">
+              <span class="feedback__name-label-text">Имя*:</span>
               <input class="feedback__name-input" type="text" name="feedback-first-name" placeholder="Петр" required>
             </label>
-            <label class="feedback__name-label">Фамилия*:
+            <label class="feedback__name-label">
+              <span class="feedback__name-label-text">Фамилия*:</span>
               <input class="feedback__name-input" type="text" name="feedback-second-name" placeholder="Иванов" required>
             </label>
-            <label class="feedback__name-label">Отчество:
+            <label class="feedback__name-label">
+              <span class="feedback__name-label-text">Отчество:</span>
               <input class="feedback__name-input" type="text" name="feedback-patronymic" placeholder="Александрович">
             </label>
           </fieldset>
@@ -59,10 +62,12 @@
             <legend class="feedback__legend">
               <h2 class="feedback__title">Контактная информация:</h2>
             </legend>
-            <label class="feedback__contact-label">Контактный телефон*:
+            <label class="feedback__contact-label">
+              <div class="feedback__contact-label-text">Контактный телефон*:</div>
               <input class="feedback__contact-input feedback__contact-input--tel" type="tel" name="feedback-tel" placeholder="Введите телефон" required>
             </label>
-            <label class="feedback__label">Электронная почта*:
+            <label class="feedback__label">
+              <div class="feedback__contact-label-text">Электронная почта*:</div>
               <input class="feedback__contact-input feedback__contact-input--email" type="email" name="feedback-email" placeholder="Введите e-mail" required>
             </label>
           </fieldset>
@@ -72,18 +77,21 @@
             </legend>
             <ul class="feedback__impression-list">
               <li class="feedback__impression-item">
-                <label class="feedback__impression-label">Скорее положительное
+                <label class="feedback__impression-label">
                   <input class="feedback__impression-input" type="radio" name="feedback-impression" value="good" checked>
+                  <span class="feedback__impression-label-text">Скорее положительное</span>
                 </label>
               </li>
               <li class="feedback__impression-item">
-                <label class="feedback__impression-label">Скорее отрицательное
+                <label class="feedback__impression-label">
                   <input class="feedback__impression-input" type="radio" name="feedback-impression" value="bad">
+                  <span class="feedback__impression-label-text">Скорее отрицательное</span>
                 </label>
               </li>
               <li class="feedback__impression-item">
-                <label class="feedback__impression-label">Затрудняюсь ответить
+                <label class="feedback__impression-label">
                   <input class="feedback__impression-input" type="radio" name="feedback-impression" value="none">
+                  <span class="feedback__impression-label-text">Затрудняюсь ответить</span>
                 </label>
               </li>
             </ul>
@@ -94,23 +102,27 @@
             </legend>
             <ul class="feedback__place-list">
               <li class="feedback__place-item">
-                <label class="feedback__place-label">Мост Дьявола
+                <label class="feedback__place-label">
                   <input class="feedback__place-input" type="checkbox" name="feedback-place" value="devils_bridge" checked>
+                  <span class="feedback__place-label-text">Мост Дьявола</span>
                 </label>
               </li>
               <li class="feedback__place-item">
-                <label class="feedback__place-label">Гора-Колокол
+                <label class="feedback__place-label">
                   <input class="feedback__place-input" type="checkbox" name="feedback-place" value="bell_rock" checked>
+                  <span class="feedback__place-label-text">Гора-Колокол</span>
                 </label>
               </li>
               <li class="feedback__place-item">
-                <label class="feedback__place-label">Слайд-парк
+                <label class="feedback__place-label">
                   <input class="feedback__place-input" type="checkbox" name="feedback-place" value="slide_park" checked>
+                  <span class="feedback__place-label-text">Слайд-парк</span>
                 </label>
               </li>
               <li class="feedback__place-item">
-                <label class="feedback__place-label">Красные скалы
+                <label class="feedback__place-label">
                   <input class="feedback__place-input" type="checkbox" name="feedback-place" value="red_rocks">
+                  <span class="feedback__place-label-text">Красные скалы</span>
                 </label>
               </li>
             </ul>
@@ -120,11 +132,13 @@
               <h2 class="feedback__title">Опишите свои эмоции:</h2>
             </legend>
             <label class="feedback__message-label">
-              <textarea class="feedback__message-input" name="feedback-message" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="feedback__message-input" name="feedback-message" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
             </label>
           </fieldset>
-          <button class="feedback__submit" type="submit">Отправить отзыв</button>
-          <p class="feedback__required">* — обязательные поля</p>
+          <div class="feedback__submit-wrapper">
+            <button class="feedback__submit" type="submit">Отправить отзыв</button>
+            <p class="feedback__required">* — обязательные поля</p>
+          </div>
         </form>
       </main>
       <footer class="page__footer footer">
