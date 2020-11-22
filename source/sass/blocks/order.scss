@@ -26,6 +26,38 @@
 }
 
 .order__map {
+  display: block;
   width: 100%;
   object-fit: cover;
+}
+
+// Tablet
+@media (min-width: $tablet-width) {
+  .order__text-wrapper {
+    padding: 58px 20px;
+  }
+
+  .order__title {
+    margin-bottom: 35px;
+  }
+
+  .order__text {
+    margin-bottom: 35px;
+    padding: 0;
+  }
+}
+
+// Desktop
+@media (min-width: $desktop-width) {
+  .order__text-wrapper {
+    padding-bottom: 66px;
+  }
+
+  .order__title {
+    margin-bottom: 40px;
+  }
+
+  .order__text {
+    margin-bottom: 40px;
+  }
 }

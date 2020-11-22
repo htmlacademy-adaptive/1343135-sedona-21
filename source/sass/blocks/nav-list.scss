@@ -1,5 +1,4 @@
 // Navigation list
-
 .nav-list {
   @include list-reset;
   align-items: center;
@@ -9,7 +8,6 @@
 }
 
 // Navigation item
-
 .nav-list__item {
   padding: 10px 20px 5px 20px;
   text-align: center;
@@ -17,7 +15,6 @@
 }
 
 // Navigation link
-
 .nav-list__link {
   font-size: 18px;
   line-height: 40px;
@@ -25,4 +22,32 @@
   color: $contrary-color;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+
+  // Navigation list
+  .nav-list {
+    padding: 16px 10px 14px 10px;
+    background-color: $basic-background;
+    box-shadow: none;
+  }
+
+  // Navigation item
+  .nav-list__item {
+    flex-basis: 20%;
+    padding: 0;
+    box-shadow: none;
+
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+  }
+
+  // Navigation link
+  .nav-list__link {
+    font-size: 14px;
+    line-height: 26px;
+    color: $basic-contrast-color;
+  }
 }

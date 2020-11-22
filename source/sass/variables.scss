@@ -18,6 +18,13 @@ $nav-item-shadow:
   0 1px 0 rgba(1, 1, 1, 0.2),
   0 1px 0 rgba(255, 255, 255, 0.2) inset;
 
-// Media width
+// Container width
 
-$tablet-width: 600px;
+$mobile-container-width: 480px;
+$tablet-container-width: 1000px;
+$desktop-container-width: 1200px;
+
+// Device width
+
+$tablet-width: 768px;
+$desktop-width: 1200px;

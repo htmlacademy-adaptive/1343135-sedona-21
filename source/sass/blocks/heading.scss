@@ -1,5 +1,4 @@
 // Heading
-
 .heading__image {
   display: block;
   width: 100%;
@@ -8,5 +7,25 @@
 
   &--small {
     height: 158px;
+  }
+}
+
+// Tablet
+@media (min-width: $tablet-width) {
+  .heading__image {
+    height: 518px;
+
+    &--small {
+      padding-bottom: 20px;
+      height: 290px;
+    }
+  }
+}
+
+// Desktop
+@media (min-width: $desktop-width) {
+  .heading__image--small {
+    padding-bottom: 60px;
+    height: 301px;
   }
 }
