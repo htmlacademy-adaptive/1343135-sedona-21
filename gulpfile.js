@@ -29,7 +29,7 @@ const server = (done) => {
   sync.init({
     server: {
       baseDir: 'source',
-      index: 'form.html'
+      index: 'photo.html'
     },
     cors: true,
     notify: false,
