@@ -42,7 +42,7 @@
         </div>
         <form class="main__feedback feedback" action="https://echo.htmlacademy.ru/" method="POST">
           <fieldset class="feedback__fieldset feedback__fieldset--small">
-            <legend class="feedback__legend">
+            <legend class="feedback__legend feedback__legend--small">
               <h2 class="feedback__title">Представьтесь:</h2>
             </legend>
             <label class="feedback__name-label">
@@ -58,21 +58,26 @@
               <input class="feedback__name-input" type="text" name="feedback-patronymic" placeholder="Александрович">
             </label>
           </fieldset>
-          <fieldset class="feedback__fieldset">
-            <legend class="feedback__legend">
+          <fieldset class="feedback__fieldset feedback__fieldset--large">
+            <legend class="feedback__legend feedback__legend--large">
               <h2 class="feedback__title">Контактная информация:</h2>
             </legend>
-            <label class="feedback__contact-label">
-              <div class="feedback__contact-label-text">Контактный телефон*:</div>
-              <input class="feedback__contact-input feedback__contact-input--tel" type="tel" name="feedback-tel" placeholder="Введите телефон" required>
-            </label>
-            <label class="feedback__label">
-              <div class="feedback__contact-label-text">Электронная почта*:</div>
-              <input class="feedback__contact-input feedback__contact-input--email" type="email" name="feedback-email" placeholder="Введите e-mail" required>
-            </label>
+            <div class="feedback__contact-wrapper">
+              <label class="feedback__contact-label">
+                <div class="feedback__contact-label-text">
+                  <span class="feedback__contact-label-text--optional">Контактный </span>
+                  телефон*:
+                </div>
+                <input class="feedback__contact-input feedback__contact-input--tel" type="tel" name="feedback-tel" placeholder="Введите телефон" required>
+              </label>
+              <label class="feedback__contact-label">
+                <div class="feedback__contact-label-text">Электронная&nbsp;почта*:</div>
+                <input class="feedback__contact-input feedback__contact-input--email" type="email" name="feedback-email" placeholder="Введите e-mail" required>
+              </label>
+            </div>
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--small feedback__fieldset--first">
-            <legend class="feedback__legend">
+            <legend class="feedback__legend feedback__legend--small feedback__legend--first">
               <h2 class="feedback__title">Ваше общее впечатление:</h2>
             </legend>
             <ul class="feedback__impression-list">
@@ -96,15 +101,18 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="feedback__fieldset">
-            <legend class="feedback__legend">
-              <h2 class="feedback__title">Посещенные достопримечательности:</h2>
+          <fieldset class="feedback__fieldset feedback__fieldset--large">
+            <legend class="feedback__legend feedback__legend--large">
+              <h2 class="feedback__title">
+                Посещенные<br>
+                достопримечательности:
+              </h2>
             </legend>
             <ul class="feedback__place-list">
               <li class="feedback__place-item">
                 <label class="feedback__place-label">
                   <input class="feedback__place-input" type="checkbox" name="feedback-place" value="devils_bridge" checked>
-                  <span class="feedback__place-label-text">Мост Дьявола</span>
+                  <span class="feedback__place-label-text">Мост&nbsp;Дьявола</span>
                 </label>
               </li>
               <li class="feedback__place-item">
@@ -122,13 +130,13 @@
               <li class="feedback__place-item">
                 <label class="feedback__place-label">
                   <input class="feedback__place-input" type="checkbox" name="feedback-place" value="red_rocks">
-                  <span class="feedback__place-label-text">Красные скалы</span>
+                  <span class="feedback__place-label-text">Красные&nbsp;скалы</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="feedback__fieldset">
-            <legend class="feedback__legend">
+          <fieldset class="feedback__fieldset feedback__fieldset--large">
+            <legend class="feedback__legend feedback__legend--large">
               <h2 class="feedback__title">Опишите свои эмоции:</h2>
             </legend>
             <label class="feedback__message-label">
