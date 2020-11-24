@@ -15,3 +15,29 @@
 .footer__social {
   margin-bottom: 40px;
 }
+
+// Tablet
+@media (min-width: $tablet-width) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 30px;
+  }
+
+  .footer__tag {
+    margin-bottom: 0;
+    margin-right: 30px;
+    flex-basis: 30%;
+  }
+
+  .footer__social {
+    margin-bottom: 0;
+    margin-right: 30px;
+    flex-basis: 30%;
+  }
+
+  .footer__copy {
+    flex-basis: 30%;
+  }
+}

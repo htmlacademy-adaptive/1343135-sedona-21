@@ -1,19 +1,21 @@
 // Header
-
 .header {
   position: relative;
   min-height: 56px;
+}
 
-  &__logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+// Logo
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 102px;
+  height: 84px;
 }
 
 // Toggle
-
 .header__nav-toggle {
   position: absolute;
   top: 50%;
@@ -29,10 +31,35 @@
 }
 
 // Header navigation list
-
 .header__nav-list {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
+}
+
+// Tablet
+@media (min-width: $tablet-width) {
+  // Toggle
+  .header__nav-toggle {
+    display: none;
+  }
+
+  // Header nav list
+  .header__nav-list {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// Desktop
+@media (min-width: $desktop-width) {
+  // Logo
+  .header__logo {
+    width: 187px;
+    height: 97px;
+  }
 }

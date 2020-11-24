@@ -27,9 +27,21 @@ img {
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 480px;
+  max-width: $mobile-container-width;
   min-height: 100vh;
   margin: 0 auto;
   background-color: $basic-background;
   box-shadow: $container-shadow;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    max-width: $tablet-container-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    max-width: $desktop-container-width;
+  }
 }

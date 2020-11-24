@@ -5,3 +5,10 @@
   color: $basic-contrast-color;
   text-transform: uppercase;
 }
+
+// Tablet
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 21px;
+  }
+}
