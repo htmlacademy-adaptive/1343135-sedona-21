@@ -2,13 +2,14 @@
   padding-bottom: 35px;
 }
 
+// Text
 .video__text-wrapper {
   padding: 32px 20px;
 }
 
 .video__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -19,16 +20,13 @@
 }
 
 // Player
-
 .video__video {
   display: block;
   width: 100%;
-  height: 201px;
-  object-fit: cover;
+  height: auto;
 }
 
 // Controls
-
 .video__controls {
   position: relative;
   display: flex;
@@ -43,7 +41,7 @@
   display: block;
   padding: 0;
   margin: 0;
-  margin-right: 30px;
+  margin-right: 42px;
   width: 16px;
   height: 20px;
   border: none;
@@ -57,8 +55,25 @@
   left: 0;
 
   height: 45px;
-  background-color: $basic-color;
-  opacity: 0.6;
+  padding: 21px 23px;
+  background-color: $video-background;
+}
+
+.video__progress-line {
+  position: relative;
+  height: 3px;
+  background-color: $video-progress-line-color;
+}
+
+.video__progress-dot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: $contrary-color;
 }
 
 .video__captions {
@@ -80,4 +95,57 @@
   height: 20px;
   border: none;
   background-color: crimson;
+}
+
+// Tablet
+@media (min-width: $tablet-width) {
+  .video {
+    padding: 50px 60px 40px 60px;
+  }
+
+  // Text
+  .video__text-wrapper {
+    margin: 0 auto;
+    padding: 65px 0;
+    max-width: 450px;
+  }
+
+  .video__title {
+    font-size: 30px;
+  }
+
+  .video__text {
+    padding: 0;
+  }
+
+  .video__player {
+    position: relative;
+  }
+
+  // Controls
+  .video__controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 35px;
+    width: 100%;
+    background-color: $video-background;
+  }
+
+  .video__progress-wrapper {
+    position: static;
+    flex: 1 0 50%;
+    margin-right: 42px;
+    padding: 3px 0;
+    height: 9px;
+    background-color: transparent;
+  }
+}
+
+// Desktop
+@media (min-width: $desktop-width) {
+  .video {
+    padding: 0 200px 85px 200px;
+  }
 }
