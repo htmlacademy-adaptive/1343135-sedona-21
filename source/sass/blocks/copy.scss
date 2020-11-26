@@ -6,11 +6,31 @@
 }
 
 .copy__text {
-  margin-right: 10px;
+  margin-right: 12px;
+  font-size: 14px;
   color: $basic-contrast-color;
   text-transform: uppercase;
 }
 
 .copy__image {
   display: block;
+}
+
+.copy__link {
+  &:hover .copy__image-path,
+  &:focus .copy__image-path {
+    fill: $accent-color;
+  }
+
+  &:active .copy__image-path {
+    fill: $active-copy-color;
+  }
+}
+
+// Tablet
+@media (min-width: $tablet-width) {
+  .copy {
+    // padding-right: 30px;
+    justify-content: flex-end;
+  }
 }

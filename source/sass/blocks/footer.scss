@@ -1,10 +1,10 @@
 .footer {
-  padding: 35px 20px 26px 20px;
+  padding: 38px 20px 26px 20px;
 }
 
 .footer__tag {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -22,13 +22,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 36px 30px;
+    padding: 37px 60px 34px 60px;
   }
 
   .footer__tag {
     margin-bottom: 0;
     margin-right: 30px;
     flex-basis: 30%;
+    text-align: left;
   }
 
   .footer__social {
@@ -39,5 +40,12 @@
 
   .footer__copy {
     flex-basis: 30%;
+  }
+}
+
+// Desktop
+@media (min-width: $desktop-width) {
+  .footer {
+    padding: 37px 120px 34px 120px;
   }
 }

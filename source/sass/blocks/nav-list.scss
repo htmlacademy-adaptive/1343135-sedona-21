@@ -1,53 +1,126 @@
 // Navigation list
 .nav-list {
   @include list-reset;
-  align-items: center;
-  justify-content: space between;
   background-color: $accent-background;
-  box-shadow: $nav-list-shadow;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 7px;
+    background-image: $nav-list-shadow;
+  }
 }
 
 // Navigation item
 .nav-list__item {
-  padding: 10px 20px 5px 20px;
-  text-align: center;
+  padding: 1px 0;
   box-shadow: $nav-item-shadow;
+
+  &:first-child {
+    padding-top: 0;
+    box-shadow: $nav-first-item-shadow;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    box-shadow: $nav-last-item-shadow;
+  }
 }
 
 // Navigation link
 .nav-list__link {
+  display: block;
+  padding: 10px 20px 5px 20px;
   font-size: 18px;
   line-height: 40px;
   font-weight: 700;
   color: $contrary-color;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  background-color: $accent-background;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-active-background;
+  }
+
+  &:active {
+    background-color: $accent-active-background;
+    color: $active-link-color;
+  }
 }
 
+// Tablet
 @media (min-width: $tablet-width) {
-
   // Navigation list
   .nav-list {
-    padding: 16px 10px 14px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     background-color: $basic-background;
-    box-shadow: none;
+
+    &::after {
+      display: none;
+    }
   }
 
   // Navigation item
   .nav-list__item {
-    flex-basis: 20%;
+    flex-basis: calc(100% / 5);
     padding: 0;
     box-shadow: none;
 
-    &:nth-child(2) {
+    &:first-child {
+      box-shadow: none;
+    }
+
+    &:last-child {
+      box-shadow: none;
+    }
+
+    &:nth-child(4n - 2) {
       margin-right: auto;
     }
   }
 
   // Navigation link
   .nav-list__link {
+    padding: 16px 10px 14px 10px;
     font-size: 14px;
     line-height: 26px;
     color: $basic-contrast-color;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: $basic-contrast-color;
+      background-color: transparent;
+      opacity: 0.3;
+    }
+  }
+
+  .nav-list__link--current {
+    color: $current-link-color;
+
+    &:hover,
+    &:focus {
+      color: $current-link-hover-color;
+    }
+
+    &:active {
+      color: $current-link-color;
+      opacity: 0.3;
+    }
   }
 }
+
+// Desktop

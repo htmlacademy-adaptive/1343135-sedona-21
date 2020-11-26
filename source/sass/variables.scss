@@ -1,6 +1,11 @@
 $basic-color: #333333;
 $basic-contrast-color: #000000;
 $contrary-color: #ffffff;
+$accent-color: #81b3d2;
+$current-link-color: #766357;
+$current-link-hover-color: #604e43;
+$active-link-color: rgba(250, 250, 250, 0.3);
+$active-copy-color: rgba(0, 0, 0, 0.3);
 
 $section-border-color: #d6d6d6;
 $fieldset-border-color: #e5e5e5;
@@ -8,9 +13,12 @@ $fieldset-border-color: #e5e5e5;
 $page-background: #f2f2f2;
 $basic-background: #ffffff;
 $accent-background: #81b3d2;
+$accent-hover-background: #669ec0;
+$accent-active-background: #5496bd;
 $neutral-background: #eeeeee;
 $input-background: #f2f2f2;
 $input-icon-background: #e6e6e6;
+$disabled-background: #e5e5e5;
 $gallery-item-background: #f2f2f2;
 $gallery-item-accent-background: #eaeaea;
 $gallery-item-desktop-background: rgba(0, 0, 0, 0.3);
@@ -18,10 +26,13 @@ $video-background: rgba(0, 0, 0, 0.6);
 $video-progress-line-color: rgba(250, 250, 250, 0.2);
 
 $container-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
-$nav-list-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+$nav-list-shadow: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
 $nav-item-shadow:
   0 1px 0 rgba(1, 1, 1, 0.2),
   0 1px 0 rgba(255, 255, 255, 0.2) inset;
+$nav-first-item-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+$nav-last-item-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+
 
 // Container width
 $mobile-container-width: 480px;
