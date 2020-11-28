@@ -1,13 +1,13 @@
 // Features list
 
 .features {
-  padding: 40px 30px 40px 70px;
+  padding: 35px 30px 37px 70px;
   margin: 0 auto;
   list-style: none;
 }
 
 .features__item {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 
   &:last-child {
     margin-bottom: 0;
@@ -17,23 +17,43 @@
 .features__title {
   position: relative;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: -48px;
-    transform: translateY(-50%);
+    left: -50px;
+    transform: translateY(-60%);
 
     width: 40px;
     height: 37px;
-    background-color: crimson;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--apartment::before {
+    background-size: 39px 37px;
+    background-image: url("../img/icon-house.svg");
+  }
+
+  &--souvenir::before {
+    background-size: 32px 38px;
+    background-image: url("../img/icon-gift.svg");
+  }
+
+  &--food::before {
+    background-size: 40px 35px;
+    background-image: url("../img/icon-burger.svg");
   }
 }
 
 .features__text {
   margin: 0;
+}
+
+.features__break {
+  display: none;
 }
 
 // Tablet
@@ -48,7 +68,7 @@
   .features__item {
     flex-basis: 33%;
     margin: 0;
-    padding: 160px 15px 60px 15px;
+    padding: 158px 15px 62px 15px;
     text-align: center;
   }
 
@@ -57,16 +77,28 @@
   }
 
   .features__title {
-    margin-bottom: 30px;
+    margin-bottom: 23px;
 
     &::before {
-      top: -102px;
+      top: -100px;
       left: 50%;
       transform: translateX(-50%);
 
       width: 76px;
       height: 75px;
-      background-color: crimson;
+      background-position: center bottom;
+    }
+
+    &--apartment::before {
+      background-size: 75px 72px;
+    }
+
+    &--souvenir::before {
+      background-size: 64px 75px;
+    }
+
+    &--food::before {
+      background-size: 76px 68px;
     }
   }
 }
@@ -74,7 +106,10 @@
 // Desktop
 @media (min-width: $desktop-width) {
   .features__item {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 158px 50px 80px 50px;
+  }
+
+  .features__break {
+    display: block;
   }
 }
