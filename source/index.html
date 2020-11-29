@@ -5,15 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Город Седона. Главная страница</title>
+        <!-- Pixel Glass -->
+      <style>
+        HTML {
+          background-repeat: no-repeat;
+          background-position:  50% 0;
+          /* Mobile layout by default */
+          background-image: url( "mockup/index-mobile.jpg" );
+        }
+        /* Tablet */
+        @media ( min-width: 768px ) {
+          HTML {
+            /* Tablet layout */
+            background-image: url( "mockup/index-tablet.jpg" );
+          }
+        }
+        /* Desktop */
+        @media ( min-width: 1200px ) {
+          HTML {
+            /* Desktop layout */
+            background-image: url( "mockup/index-desktop.jpg" );
+          }
+        }
+      </style>
+      <link href="mockup/pixel-glass/styles.css" rel="stylesheet">
+      <script src="mockup/pixel-glass/script.js"></script>
+      <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <div class="container">
       <header class="page__header header"><!-- header--no-js -->
         <a class="header__logo logo">
-          <picture>
+          <picture class="logo__image">
             <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="logo__image" src="img/logo-mobile.svg" alt="Логотип города Седона">
+            <img src="img/logo-mobile.svg" alt="Логотип города Седона">
           </picture>
         </a>
         <nav class="header__nav"><!-- header__nav--open -->

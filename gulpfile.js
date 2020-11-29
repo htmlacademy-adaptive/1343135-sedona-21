@@ -28,7 +28,8 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'source',
+      index: 'form.html'
     },
     cors: true,
     notify: false,
