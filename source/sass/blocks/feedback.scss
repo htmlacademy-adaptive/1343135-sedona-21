@@ -28,7 +28,7 @@
 
 // Legend
 .feedback__legend {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding: 0;
   padding-top: 21px;
   width: 100%;
@@ -91,10 +91,6 @@
 }
 
 // Contact
-.feedback__contact-legend {
-  margin-bottom: 16px;
-}
-
 .feedback__contact-wrapper {
   margin-bottom: -13px;
 }
@@ -252,11 +248,6 @@
 }
 
 // Place
-.feedback__place-legend {
-  padding-top: 15px;
-  margin-bottom: 21px;
-}
-
 .feedback__place-list {
   @include list-reset;
   margin-bottom: -24px;
@@ -355,10 +346,6 @@
 }
 
 // Message
-.feedback__message-legend {
-  margin-bottom: 15px;
-}
-
 .feedback__message-label {
   display: block;
 }
@@ -393,7 +380,7 @@
 
 // Submit
 .feedback__submit-wrapper {
-  padding: 22px 20px 0 20px;
+  padding: 18px 20px 0 20px;
 }
 
 .feedback__submit {
@@ -433,70 +420,19 @@
     }
   }
 
-  .feedback__legend {
-    margin-bottom: 56px;
-    padding: 0;
-  }
-
-  .feedback__title {
-    font-size: 21px;
-  }
-
-  // Name
-  .feedback__name-fieldset {
-    grid-column: span 1;
+  .feedback__fieldset:first-child {
     padding-left: 58px;
+
+    .feedback__legend {
+      text-align: left;
+    }
   }
 
-  .feedback__name-legend {
-    text-align: left;
-  }
-
-  .feedback__name-label {
-    margin-bottom: 21px;
-  }
-
-  // Contact
-  .feedback__contact-fieldset {
+  .feedback__fieldset--large {
     grid-column: 1 / -1;
   }
 
-  .feedback__contact-legend {
-    position: relative;
-    margin-bottom: 20px;
-    padding-right: 130px;
-    padding-left: 130px;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 40%;
-
-      width: 123px;
-      height: 1px;
-      background-color: $fieldset-border-color;
-    }
-
-    &::before {
-      left: 0;
-    }
-
-    &::after {
-      right: 0;
-    }
-  }
-
-  .feedback__contact-wrapper {
-    margin-bottom: -25px;
-  }
-
-  .feedback__contact-label {
-    margin-bottom: 25px;
-  }
-
-  // Impression
-  .feedback__impression-fieldset {
+  .feedback__fieldset--first {
     position: relative;
     grid-column: span 1;
     order: -1;
@@ -516,29 +452,20 @@
       height: auto;
       background-color: $fieldset-border-color;
     }
+
+    .feedback__legend {
+      text-align: left;
+    }
   }
 
-  .feedback__impression-legend {
-    text-align: left;
+  .feedback__legend {
+    margin-bottom: 56px;
+    padding: 0;
   }
 
-  .feedback__impression-item {
-    margin-bottom: 22px;
-  }
-
-  .feedback__impression-label-text {
-    padding-left: 75px;
-  }
-
-  // Place
-  .feedback__place-fieldset {
-    grid-column: 1 / -1;
-    margin-bottom: 22px;
-  }
-
-  .feedback__place-legend {
+  .feedback__fieldset--large .feedback__legend {
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
     padding-top: 0;
     padding-right: 130px;
     padding-left: 130px;
@@ -547,7 +474,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: 55%;
+      top: 50%;
+      transform: translateY(-50%);
 
       width: 123px;
       height: 1px;
@@ -563,12 +491,40 @@
     }
   }
 
+  .feedback__title {
+    font-size: 21px;
+  }
+
+  // Name
+  .feedback__name-label {
+    margin-bottom: 21px;
+  }
+
+  // Contact
+  .feedback__contact-wrapper {
+    margin-bottom: -25px;
+  }
+
+  .feedback__contact-label {
+    margin-bottom: 25px;
+  }
+
+  // Impression
+  .feedback__impression-item {
+    margin-bottom: 22px;
+  }
+
+  .feedback__impression-label-text {
+    padding-left: 75px;
+  }
+
+  // Place
   .feedback__place-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0 64px 0 95px;
+    padding: 25px 64px 23px 95px;
     margin-right: -30px;
     margin-bottom: -31px;
   }
@@ -580,35 +536,8 @@
   }
 
   // Message
-  .feedback__message-fieldset {
-    grid-column: 1 / -1;
-    margin-bottom: 3px;
-  }
-
-  .feedback__message-legend {
-    position: relative;
-    margin-bottom: 56px;
-    padding-right: 130px;
-    padding-left: 130px;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 40%;
-
-      width: 123px;
-      height: 1px;
-      background-color: $fieldset-border-color;
-    }
-
-    &::before {
-      left: 0;
-    }
-
-    &::after {
-      right: 0;
-    }
+  .feedback__message-label {
+    padding: 35px 0 3px 0;
   }
 
   .feedback__message-input {
@@ -649,13 +578,23 @@
     padding: 28px 120px 66px 120px;
   }
 
-  // Name
-  .feedback__name-fieldset {
+  .feedback__fieldset:first-child {
     padding-left: 80px;
+
+    .feedback__legend {
+      text-align: left;
+    }
   }
 
-  // Contact
-  .feedback__contact-legend {
+  .feedback__fieldset--first {
+    margin-bottom: 9px;
+
+    .feedback__legend {
+      padding-left: 80px;
+    }
+  }
+
+  .feedback__fieldset--large .feedback__legend {
     margin-bottom: 74px;
     padding-left: 300px;
     padding-right: 300px;
@@ -666,6 +605,7 @@
     }
   }
 
+  // Contact
   .feedback__contact-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -700,35 +640,16 @@
   }
 
   // Impression
-  .feedback__impression-fieldset {
+  .feedback__impression-list {
     padding-left: 3px;
-    margin-bottom: 10px;
-  }
-
-  .feedback__impression-legend {
-    margin-bottom: 54px;
-    padding-left: 77px;
   }
 
   // Place
-  .feedback__place-fieldset {
-    margin-bottom: 18px;
-  }
-
-  .feedback__place-legend {
-    margin-bottom: 47px;
-    padding-left: 300px;
-    padding-right: 300px;
-
-    &::before,
-    &::after {
-      width: 280px;
-    }
-  }
-
   .feedback__place-list {
     margin-right: -20px;
+    margin-top: -28px;
     padding: 0;
+    padding-bottom: 18px;
   }
 
   .feedback__place-item {
@@ -737,13 +658,8 @@
   }
 
   // Message
-  .feedback__message-legend {
-    padding-left: 300px;
-    padding-right: 300px;
-
-    &::before,
-    &::after {
-      width: 280px;
-    }
+  .feedback__message-label {
+    margin-top: -18px;
+    padding-top: 0;
   }
 }
