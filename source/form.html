@@ -5,14 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Город Седона. Оставить отзыв</title>
+    <!-- Pixel Glass -->
+      <style>
+        HTML {
+          background-repeat: no-repeat;
+          background-position:  50% 0;
+          /* Mobile layout by default */
+          background-image: url( "mockup/form-mobile.jpg" );
+        }
+        /* Tablet */
+        @media ( min-width: 768px ) {
+          HTML {
+            /* Tablet layout */
+            background-image: url( "mockup/form-tablet.jpg" );
+          }
+        }
+        /* Desktop */
+        @media ( min-width: 1200px ) {
+          HTML {
+            /* Desktop layout */
+            background-image: url( "mockup/form-desktop.jpg" );
+          }
+        }
+      </style>
+      <link href="mockup/pixel-glass/styles.css" rel="stylesheet">
+      <script src="mockup/pixel-glass/script.js"></script>
+      <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <div class="container">
-      <header class="page__header header">
+      <header class="page__header header"><!-- header--no-js -->
         <a class="header__logo logo" href="index.html">
-          <img class="logo__image" src="https://via.placeholder.com/102x84" width="102" height="84" alt="Логотип города Седона">
+          <picture class="logo__image">
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Логотип города Седона">
+          </picture>
         </a>
-        <nav class="header__nav">
+        <nav class="header__nav"><!-- header__nav--open -->
           <button class="header__nav-toggle" type="button" aria-controls="header__nav-list" aria-expanded="true">
             <span class="visually-hidden">Меню</span>
           </button>
@@ -34,15 +64,19 @@
       </header>
       <main class="page__main main">
         <div class="main__heading heading">
-          <img class="heading__image heading__image--small" src="https://via.placeholder.com/1200x518" width="1200" height="518" alt="Горный пейзаж Седоны">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/heading-small-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/heading-small-tablet.jpg">
+            <img class="heading__image heading__image--small" src="img/heading-small-mobile.jpg" alt="Горный пейзаж Седоны">
+          </picture>
         </div>
-        <div class="main__lead lead">
+        <div class="main__lead lead lead--large-font">
           <h1 class="lead__title title">Оставьте свой отзыв</h1>
-          <p class="lead__text text">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных Вами достопримечательностях</p>
+          <p class="lead__text text">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них,<br class="lead__break lead__break--tablet"> а&nbsp;также о посещенных Вами достопримечательностях</p>
         </div>
         <form class="main__feedback feedback" action="https://echo.htmlacademy.ru/" method="POST">
-          <fieldset class="feedback__fieldset feedback__fieldset--small">
-            <legend class="feedback__legend feedback__legend--small">
+          <fieldset class="feedback__fieldset">
+            <legend class="feedback__legend">
               <h2 class="feedback__title">Представьтесь:</h2>
             </legend>
             <label class="feedback__name-label">
@@ -59,7 +93,7 @@
             </label>
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--large">
-            <legend class="feedback__legend feedback__legend--large">
+            <legend class="feedback__legend">
               <h2 class="feedback__title">Контактная информация:</h2>
             </legend>
             <div class="feedback__contact-wrapper">
@@ -76,8 +110,8 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="feedback__fieldset feedback__fieldset--small feedback__fieldset--first">
-            <legend class="feedback__legend feedback__legend--small feedback__legend--first">
+          <fieldset class="feedback__fieldset feedback__fieldset--first">
+            <legend class="feedback__legend">
               <h2 class="feedback__title">Ваше общее впечатление:</h2>
             </legend>
             <ul class="feedback__impression-list">
@@ -102,7 +136,7 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--large">
-            <legend class="feedback__legend feedback__legend--large">
+            <legend class="feedback__legend">
               <h2 class="feedback__title">
                 Посещенные<br>
                 достопримечательности:
@@ -136,11 +170,11 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__fieldset feedback__fieldset--large">
-            <legend class="feedback__legend feedback__legend--large">
+            <legend class="feedback__legend">
               <h2 class="feedback__title">Опишите свои эмоции:</h2>
             </legend>
             <label class="feedback__message-label">
-              <textarea class="feedback__message-input" name="feedback-message" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="feedback__message-input" name="feedback-message" cols="30" rows="3" placeholder="Опишите подробно все свои восторги"></textarea>
             </label>
           </fieldset>
           <div class="feedback__submit-wrapper">
@@ -171,7 +205,10 @@
         <p class="footer__copy copy">
           <span class="copy__text">Разработано</span>
           <a class="copy__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copy__image" src="img/htmlacademy.svg" width="27" height="35" alt="Логотип HTML академии">
+            <span class="visually-hidden">Логотип HTML академии</span>
+            <svg class="copy__image" width="27" height="35" viewBox="0 0 27 35" fill="none" aria-hidden="true">
+              <path class="copy__image-path" d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
+            </svg>
           </a>
         </p>
       </footer>

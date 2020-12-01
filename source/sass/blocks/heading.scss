@@ -4,6 +4,7 @@
   width: 100%;
   height: 389px;
   object-fit: cover;
+  object-position: center bottom;
 
   &--small {
     height: 158px;
@@ -16,7 +17,6 @@
     height: 518px;
 
     &--small {
-      padding-bottom: 20px;
       height: 290px;
     }
   }
@@ -25,7 +25,6 @@
 // Desktop
 @media (min-width: $desktop-width) {
   .heading__image--small {
-    padding-bottom: 60px;
     height: 301px;
   }
 }

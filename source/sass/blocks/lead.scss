@@ -1,7 +1,7 @@
 // Lead
 .lead {
   padding: 32px 20px 36px 20px;
-  max-width: 60ch;
+  max-width: 540px;
   text-align: center;
 }
 
@@ -18,10 +18,39 @@
   text-transform: uppercase;
 }
 
+// Break
+.lead__break {
+  display: none;
+}
+
+// Large font
+.lead--large-font {
+  padding: 35px 20px 17px 20px;
+
+  .lead__title {
+    margin-bottom: 29px;
+  }
+}
+
 // Tablet
 @media (min-width: $tablet-width) {
   .lead {
     padding: 44px 20px 53px 20px;
+  }
+
+  // Break
+  .lead__break--tablet {
+    display: block;
+  }
+
+  // Large font
+  .lead--large-font {
+    padding: 62px 20px 75px 20px;
+
+    .lead__title {
+      font-size: 30px;
+      margin-bottom: 33px;
+    }
   }
 }
 
@@ -29,5 +58,14 @@
 @media (min-width: $desktop-width) {
   .lead {
     padding: 55px 20px 43px 20px;
+  }
+
+  // Large font
+  .lead--large-font {
+    padding: 111px 20px 30px 20px;
+
+    .lead__title {
+      margin-bottom: 34px;
+    }
   }
 }
