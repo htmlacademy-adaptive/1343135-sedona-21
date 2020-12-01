@@ -1,21 +1,22 @@
 .video {
-  padding-bottom: 35px;
+  padding-bottom: 40px;
 }
 
 // Text
 .video__text-wrapper {
-  padding: 32px 20px;
+  padding: 32px 20px 35px 20px;
 }
 
 .video__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   text-align: center;
 }
 
 .video__text {
   margin: 0;
   padding: 0 10px;
+  line-height: 24px;
   text-align: center;
 }
 
@@ -31,21 +32,44 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 23px;
+  padding: 23px 23px 23px 25px;
   margin: 0 auto;
   width: calc(100% - 40px);
   background-color: $input-background;
 }
 
-.video__repeat {
+.video__replay-icon {
+  color: $video-button-color;
+}
+
+.video__replay {
   display: block;
   padding: 0;
   margin: 0;
-  margin-right: 42px;
+  margin-right: 32px;
   width: 16px;
   height: 20px;
   border: none;
-  background-color: crimson;
+  background-color: transparent;
+  outline-offset: 3px;
+
+  &:focus:not(:-moz-focusring) {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:hover .video__replay-icon,
+  &:focus .video__replay-icon {
+    color: $basic-color;
+  }
+
+  &:active .video__replay-icon {
+    color: $basic-color;
+    opacity: 0.3;
+  }
 }
 
 .video__progress-wrapper {
@@ -76,16 +100,43 @@
   background-color: $contrary-color;
 }
 
+.video__captions-icon {
+  color: $video-button-color;
+}
+
 .video__captions {
   display: block;
   padding: 0;
   margin: 0;
-  margin-right: 30px;
+  margin-right: 32px;
   margin-left: auto;
   width: 32px;
   height: 20px;
   border: none;
-  background-color: crimson;
+  background-color: transparent;
+  outline-offset: 3px;
+
+  &:focus:not(:-moz-focusring) {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:hover .video__captions-icon,
+  &:focus .video__captions-icon {
+    color: $basic-color;
+  }
+
+  &:active .video__captions-icon {
+    color: $basic-color;
+    opacity: 0.3;
+  }
+}
+
+.video__fullscreen-icon {
+  color: $video-button-color;
 }
 
 .video__fullscreen {
@@ -94,7 +145,26 @@
   width: 20px;
   height: 20px;
   border: none;
-  background-color: crimson;
+  background-color: transparent;
+  outline-offset: 3px;
+
+  &:focus:not(:-moz-focusring) {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:hover .video__fullscreen-icon,
+  &:focus .video__fullscreen-icon {
+    color: $basic-color;
+  }
+
+  &:active .video__fullscreen-icon {
+    color: $basic-color;
+    opacity: 0.3;
+  }
 }
 
 // Tablet
@@ -106,12 +176,13 @@
   // Text
   .video__text-wrapper {
     margin: 0 auto;
-    padding: 65px 0;
+    padding: 7px 0 80px 0;
     max-width: 450px;
   }
 
   .video__title {
     font-size: 30px;
+    margin-bottom: 34px;
   }
 
   .video__text {
@@ -122,15 +193,40 @@
     position: relative;
   }
 
+  // Player
+  .video__video {
+    height: 500px;
+    object-fit: cover;
+  }
+
   // Controls
   .video__controls {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 35px;
+    padding: 35px 40px 38px 35px;
     width: 100%;
     background-color: $video-background;
+  }
+
+  .video__replay-icon {
+    color: $contrary-color;
+  }
+
+  .video__replay {
+    margin-right: 42px;
+
+    &:hover .video__replay-icon,
+    &:focus .video__replay-icon {
+      color: $contrary-color;
+      opacity: 0.6;
+    }
+
+    &:active .video__replay-icon {
+      color: $contrary-color;
+      opacity: 0.3;
+    }
   }
 
   .video__progress-wrapper {
@@ -141,11 +237,56 @@
     height: 9px;
     background-color: transparent;
   }
+
+  .video__captions-icon {
+    color: $contrary-color;
+  }
+
+  .video__captions {
+    &:hover .video__captions-icon,
+    &:focus .video__captions-icon {
+      color: $contrary-color;
+      opacity: 0.6;
+    }
+
+    &:active .video__captions-icon {
+      color: $contrary-color;
+      opacity: 0.3;
+    }
+  }
+
+
+  .video__fullscreen-icon {
+    color: $contrary-color;
+  }
+
+  .video__fullscreen {
+    &:hover .video__fullscreen-icon,
+    &:focus .video__fullscreen-icon {
+      color: $contrary-color;
+      opacity: 0.6;
+    }
+
+    &:active .video__fullscreen-icon {
+      color: $contrary-color;
+      opacity: 0.3;
+    }
+  }
 }
 
 // Desktop
 @media (min-width: $desktop-width) {
   .video {
-    padding: 0 200px 85px 200px;
+    padding: 54px 200px 85px 200px;
+  }
+
+  // Text
+  .video__text-wrapper {
+    padding-bottom: 78px;
+  }
+
+  // Player
+  .video__video {
+    height: auto;
   }
 }

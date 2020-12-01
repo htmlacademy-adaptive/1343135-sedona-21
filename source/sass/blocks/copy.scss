@@ -14,23 +14,25 @@
 
 .copy__image {
   display: block;
+  color: $basic-contrast-color;
 }
 
 .copy__link {
-  &:hover .copy__image-path,
-  &:focus .copy__image-path {
-    fill: $accent-color;
+  outline-offset: 3px;
+
+  &:hover .copy__image,
+  &:focus .copy__image {
+    color: $accent-color;
   }
 
-  &:active .copy__image-path {
-    fill: $active-copy-color;
+  &:active .copy__image {
+    color: $active-copy-color;
   }
 }
 
 // Tablet
 @media (min-width: $tablet-width) {
   .copy {
-    // padding-right: 30px;
     justify-content: flex-end;
   }
 }

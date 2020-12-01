@@ -5,7 +5,7 @@
 .gallery__item {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 22px 20px 12px 20px;
   border-top: 1px solid $fieldset-border-color;
 
   &:last-child {
@@ -15,7 +15,7 @@
 
 // Text
 .gallery__title-wrapper {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .gallery__title {
@@ -63,7 +63,7 @@
 // Tablet
 @media (min-width: $tablet-width) {
   .gallery {
-    padding: 35px 60px 0 60px;
+    padding: 3px 60px 0 60px;
   }
 
   .gallery__list {
@@ -104,6 +104,11 @@
 
   .gallery__like {
     flex: 0 0 70px;
+    background-position: left 5px top 6px;
+  }
+
+  .gallery__item--large .gallery__like {
+    padding-right: 0;
   }
 
   // Link
@@ -123,7 +128,7 @@
 // Desktop
 @media (min-width: $desktop-width) {
   .gallery {
-    padding: 35px 0 0 0;
+    padding: 48px 0 0 0;
   }
 
   .gallery__list {
