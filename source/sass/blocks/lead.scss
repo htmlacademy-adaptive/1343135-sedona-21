@@ -32,6 +32,12 @@
   }
 }
 
+// Small top
+.lead--small-top {
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+
 // Tablet
 @media (min-width: $tablet-width) {
   .lead {
@@ -67,5 +73,10 @@
     .lead__title {
       margin-bottom: 34px;
     }
+  }
+
+  // Small top
+  .lead--small-top {
+    padding-top: 100px;
   }
 }

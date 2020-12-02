@@ -5,14 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Город Седона. Галерея</title>
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url( "mockup/photo-mobile.jpg" );
+      }
+      /* Tablet */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Tablet layout */
+          background-image: url( "mockup/photo-tablet.jpg" );
+        }
+      }
+      /* Desktop */
+      @media ( min-width: 1200px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url( "mockup/photo-desktop.jpg" );
+        }
+      }
+    </style>
+    <link href="mockup/pixel-glass/styles.css" rel="stylesheet">
+    <script src="mockup/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <div class="container">
-      <header class="page__header header">
+      <header class="page__header header"><!-- header--no-js -->
         <a class="header__logo logo" href="index.html">
-          <img class="logo__image" src="https://via.placeholder.com/102x84" width="102" height="84" alt="Логотип города Седона">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__image" src="img/logo-mobile.svg" alt="Логотип города Седона">
+          </picture>
         </a>
-        <nav class="header__nav">
+        <nav class="header__nav"><!-- header__nav--open -->
           <button class="header__nav-toggle" type="button" aria-controls="header__nav-list" aria-expanded="true">
             <span class="visually-hidden">Меню</span>
           </button>
@@ -34,13 +64,17 @@
       </header>
       <main class="page__main main">
         <div class="main__heading heading">
-          <img class="heading__image heading__image--small" src="https://via.placeholder.com/1200x518" width="1200" height="518" alt="Горный пейзаж Седоны">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/heading-small-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/heading-small-tablet.jpg">
+            <img class="heading__image heading__image--small" src="img/heading-small-mobile.jpg" alt="Горный пейзаж Седоны">
+          </picture>
         </div>
-        <div class="main__lead lead lead--large-font">
+        <div class="main__lead lead lead--large-font lead--small-top">
           <h1 class="lead__title title">Фото и видео
             <span class="visually-hidden"> из города Седона</span>
           </h1>
-          <p class="lead__text text">Не можете решиться на&nbsp;путешествие из-за&nbsp;курса? Фотографии помогут вам забыть о&nbsp;политике и&nbsp;экономике.</p>
+          <p class="lead__text text">Не можете решиться на&nbsp;путешествие из-за&nbsp;курса?<br class="lead__break lead__break--tablet"> Фотографии помогут вам забыть о&nbsp;политике и&nbsp;экономике.</p>
         </div>
         <section class="gallery">
           <h2 class="visually-hidden">Галерея фото</h2>
@@ -115,8 +149,11 @@
               <source src="media/video-1.ogv" type="video/ogg">
             </video>
             <div class="video__controls">
-              <button class="video__repeat" type="button">
+              <button class="video__replay" type="button">
                 <span class="visually-hidden">Воспроизвести с начала</span>
+                <svg class="video__replay-icon" width="16" height="20" aria-hidden="true">
+                  <use href="img/sprite.svg#icon-replay"></use>
+                </svg>
               </button>
               <div class="video__progress-wrapper">
                 <div class="video__progress-line">
@@ -126,9 +163,15 @@
               </div>
               <button class="video__captions" type="button">
                 <span class="visually-hidden">Субтитры</span>
+                <svg class="video__captions-icon" width="32" height="20" aria-hidden="true">
+                  <use href="img/sprite.svg#icon-captions"></use>
+                </svg>
               </button>
               <button class="video__fullscreen" type="button">
                 <span class="visually-hidden">Полный экран</span>
+                <svg class="video__fullscreen-icon" width="20" height="20" aria-hidden="true">
+                  <use href="img/sprite.svg#icon-fullscreen"></use>
+                </svg>
               </button>
             </div>
           </div>
@@ -156,7 +199,10 @@
         <p class="footer__copy copy">
           <span class="copy__text">Разработано</span>
           <a class="copy__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copy__image" src="img/htmlacademy.svg" width="27" height="35" alt="Логотип HTML академии">
+            <span class="visually-hidden">Логотип HTML академии</span>
+            <svg class="copy__image" width="27" height="35" aria-hidden="true">
+              <use href="img/sprite.svg#html-academy"></use>
+            </svg>
           </a>
         </p>
       </footer>
