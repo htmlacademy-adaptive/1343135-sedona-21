@@ -37,6 +37,10 @@
   display: none;
 }
 
+.advantage__nobreak {
+  white-space: nowrap;
+}
+
 .advantage__image {
   display: block;
   width: 100%;
@@ -85,8 +89,12 @@
   }
 
   // Advantage image
+  .advantage__image-wrapper {
+    flex-basis: 66.7%;
+    min-width: 512px;
+  }
+
   .advantage__image {
-    width: 66.6%;
     min-height: 256px;
     height: auto;
   }
