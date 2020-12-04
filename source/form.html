@@ -3,34 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.css">
     <title>Город Седона. Оставить отзыв</title>
-    <!-- Pixel Glass -->
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* Mobile layout by default */
-        background-image: url( "mockup/form-mobile.jpg" );
-      }
-      /* Tablet */
-      @media ( min-width: 768px ) {
-        HTML {
-          /* Tablet layout */
-          background-image: url( "mockup/form-tablet.jpg" );
-        }
-      }
-      /* Desktop */
-      @media ( min-width: 1200px ) {
-        HTML {
-          /* Desktop layout */
-          background-image: url( "mockup/form-desktop.jpg" );
-        }
-      }
-    </style>
-    <link href="mockup/pixel-glass/styles.css" rel="stylesheet">
-    <script src="mockup/pixel-glass/script.js"></script>
-    <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <div class="container">
@@ -63,12 +39,13 @@
         </nav>
       </header>
       <main class="page__main main">
-        <div class="main__heading heading">
+        <div class="main__heading heading heading--small">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/heading-small-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/heading-small-tablet.jpg">
-            <img class="heading__image heading__image--small" src="img/heading-small-mobile.jpg" alt="Горный пейзаж Седоны">
+            <source media="(min-width: 1200px)" srcset="img/heading-small-desktop.jpg 1x, img/heading-small-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/heading-small-tablet.jpg 1x, img/heading-small-tablet@2x.jpg 2x">
+            <img class="heading__image" src="img/heading-small-mobile.jpg" srcset="img/heading-small-mobile.jpg 1x, img/heading-small-mobile@2x.jpg 2x" alt="Горный пейзаж Седоны">
           </picture>
+          <img class="heading__text" src="img/heading-text.svg"  width="229" height="39" alt="Sedona">
         </div>
         <div class="main__lead lead lead--large-font">
           <h1 class="lead__title title">Оставьте свой отзыв</h1>
@@ -205,9 +182,9 @@
         <p class="footer__copy copy">
           <span class="copy__text">Разработано</span>
           <a class="copy__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">Логотип HTML академии</span>
+            <span class="visually-hidden">Сайт HTML академии</span>
             <svg class="copy__image" width="27" height="35" aria-hidden="true">
-              <use href="img/sprite.svg#html-academy"></use>
+              <use xlink:href="img/sprite.svg#html-academy"></use>
             </svg>
           </a>
         </p>
