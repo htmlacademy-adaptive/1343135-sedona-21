@@ -10,7 +10,7 @@
   </head>
   <body class="page__body">
     <div class="container">
-      <header class="page__header header"><!-- header--no-js -->
+      <header class="page__header header header--no-js">
         <a class="header__logo logo" href="index.html">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
@@ -18,8 +18,8 @@
             <img class="logo__image" src="img/logo-mobile.svg" alt="Логотип города Седона">
           </picture>
         </a>
-        <nav class="header__nav"><!-- header__nav--open -->
-          <button class="header__nav-toggle" type="button" aria-controls="header__nav-list" aria-expanded="true">
+        <nav class="header__nav">
+          <button class="header__nav-toggle" type="button" aria-controls="header__nav-list" aria-expanded="false">
             <span class="visually-hidden">Меню</span>
           </button>
           <ul class="header__nav-list nav-list" id="header__nav-list">
@@ -40,11 +40,6 @@
       </header>
       <main class="page__main main">
         <div class="main__heading heading heading--small">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/heading-small-desktop.jpg 1x, img/heading-small-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/heading-small-tablet.jpg 1x, img/heading-small-tablet@2x.jpg 2x">
-            <img class="heading__image" src="img/heading-small-mobile.jpg" srcset="img/heading-small-mobile.jpg 1x, img/heading-small-mobile@2x.jpg 2x" alt="Горный пейзаж Седоны">
-          </picture>
           <img class="heading__text" src="img/heading-text.svg"  width="229" height="39" alt="Sedona">
         </div>
         <div class="main__lead lead lead--large-font">
@@ -190,5 +185,6 @@
         </p>
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
