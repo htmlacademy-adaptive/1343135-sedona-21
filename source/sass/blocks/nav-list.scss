@@ -52,6 +52,13 @@
     background-color: $accent-active-background;
     color: $active-link-color;
   }
+
+  &--current:hover,
+  &--current:focus,
+  &--current:active {
+    background-color: $accent-background;
+    color: $contrary-color;
+  }
 }
 
 // Tablet
