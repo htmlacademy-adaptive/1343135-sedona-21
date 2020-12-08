@@ -396,6 +396,29 @@
   color: $contrary-color;
   text-transform: uppercase;
   background-color: $accent-background;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-hover-background;
+  }
+
+  &:active {
+    color: $active-link-color;
+    background-color: $accent-active-background;
+  }
+
+  &:disabled {
+    color: $contrary-color;
+    background-color: $disabled-background;
+  }
+
+  &:focus:not(:-moz-focusring) {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 .feedback__required {
