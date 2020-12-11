@@ -2,7 +2,7 @@
 .heading {
   position: relative;
   height: 389px;
-  background-color: $page-background;
+  background-color: darken($page-background, 10%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
