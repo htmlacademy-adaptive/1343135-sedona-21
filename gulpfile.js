@@ -162,7 +162,5 @@ exports.default = gulp.series(
 
 exports.build = gulp.series(
   clear,
-  gulp.parallel(html, styles, copyFonts, optimizeImages, webp, sprite, js),
-  server,
-  watcher
+  gulp.parallel(html, styles, copyFonts, optimizeImages, webp, sprite, js)
 );
