@@ -52,6 +52,7 @@
   border: none;
   background-color: transparent;
   outline-offset: 3px;
+  cursor: pointer;
 
   &:focus:not(:-moz-focusring) {
     outline: none;
@@ -81,6 +82,7 @@
   height: 45px;
   padding: 21px 23px;
   background-color: $video-background;
+  cursor: pointer;
 }
 
 .video__progress-line {
@@ -115,6 +117,7 @@
   border: none;
   background-color: transparent;
   outline-offset: 3px;
+  cursor: pointer;
 
   &:focus:not(:-moz-focusring) {
     outline: none;
@@ -147,6 +150,7 @@
   border: none;
   background-color: transparent;
   outline-offset: 3px;
+  cursor: pointer;
 
   &:focus:not(:-moz-focusring) {
     outline: none;
